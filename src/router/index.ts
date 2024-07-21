@@ -6,12 +6,20 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: import('../views/HomeView.vue'),
+      component: () => import('../views/HomeView.vue'),
+      meta: {
+        title: '首页',
+        icon: 'House',
+      },
     },
     {
       path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue'),
+      meta: {
+        title: '关于',
+        icon: 'Reading',
+      },
     },
   ],
 });

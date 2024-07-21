@@ -8,5 +8,6 @@ console.log('🚀 ~ count:', count);
 <template>
   <div>
     <h1 @click="count++">Home View</h1>
+    <div v-for="item in 10000" :key="item">{{ item }}</div>
   </div>
 </template>
