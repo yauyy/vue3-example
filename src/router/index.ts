@@ -21,6 +21,15 @@ const router = createRouter({
         icon: 'Reading',
       },
     },
+    {
+      path: '/fflate',
+      name: 'fflate',
+      component: () => import('../views/fflate/index.vue'),
+      meta: {
+        title: '压缩',
+        icon: 'FolderAdd',
+      },
+    },
   ],
 });
 

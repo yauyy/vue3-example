@@ -3,10 +3,12 @@ import AutoImport from 'unplugin-auto-import/vite';
 import { defineConfig } from 'vite';
 import { URL, fileURLToPath } from 'node:url';
 import UnoCSS from 'unocss/vite';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 export default defineConfig({
   plugins: [
     vue(),
+    vueJsx(),
     AutoImport({
       include: [
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
