@@ -39,6 +39,15 @@ const router = createRouter({
         icon: 'FolderAdd',
       },
     },
+    {
+      path: '/xlsx',
+      name: 'xlsx',
+      component: () => import('../views/xlsx/index.vue'),
+      meta: {
+        title: 'xlsx',
+        icon: 'FolderAdd',
+      },
+    },
   ],
 });
 
