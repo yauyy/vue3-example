@@ -1,4 +1,4 @@
-import { strToU8, zipSync, Gzip, strFromU8, gzip, zip } from 'fflate';
+import { strToU8, zipSync } from 'fflate';
 
 export function save(blob: Blob, filename: string) {
   const link = document.createElement('a');
@@ -63,7 +63,7 @@ export const hangleZip = async () => {
     'https://table-file.xironiot.com/cos_files/1721468188063265524_tmp_369172e0f13fd56e3421dbd88db943a507315a329edb807a.jpg',
     'https://table-file.xironiot.com/cos_files/1721292586712580597_tmp_a820df6171dbba7ce2cb849e3f737256f220734c9d7f5181.jpg',
   ];
-  const img = 'https://table-file.xironiot.com/files/1717381504049428608_exZwQgkZQEjy8f1270a16a07b5f11c28b36236a11a0f.jpg';
+  // const img = 'https://table-file.xironiot.com/files/1717381504049428608_exZwQgkZQEjy8f1270a16a07b5f11c28b36236a11a0f.jpg';
   const files = reactive<any>({});
   watch(
     () => files,

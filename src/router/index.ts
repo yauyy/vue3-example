@@ -30,6 +30,15 @@ const router = createRouter({
         icon: 'FolderAdd',
       },
     },
+    {
+      path: '/useModel',
+      name: 'useModel',
+      component: () => import('../views/useModel/index.vue'),
+      meta: {
+        title: 'useModel',
+        icon: 'FolderAdd',
+      },
+    },
   ],
 });
 
