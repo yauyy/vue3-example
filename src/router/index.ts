@@ -48,6 +48,54 @@ const router = createRouter({
         icon: 'FolderAdd',
       },
     },
+    {
+      path: '/sse',
+      name: 'sse',
+      component: () => import('../views/sse/index.vue'),
+      meta: {
+        title: 'sse',
+        icon: 'FolderAdd',
+      },
+    },
+    {
+      path: '/esModule',
+      name: 'esModule',
+      redirect: '/esModule/esModuleDemo',
+      component: () => import('../views/esModule/index.vue'),
+      meta: {
+        title: 'esModule',
+        icon: 'FolderAdd',
+      },
+      children: [
+        {
+          path: 'demo',
+          name: 'esModuleDemo',
+          component: () => import('../views/esModule/esModuleDemo.vue'),
+          meta: {
+            title: 'esModuleDemo',
+            icon: 'FolderAdd',
+          },
+        },
+        {
+          path: 'test',
+          name: 'esModuleTest',
+          component: () => import('../views/esModule/esModuleTest.vue'),
+          meta: {
+            title: 'esModuleTest',
+            icon: 'FolderAdd',
+          },
+        },
+      ],
+    },
+    {
+      path: '/libDemo',
+      name: 'libDemo',
+      component: () => import('../views/libDemo/index.vue'),
+      meta: {
+        title: '组件测试',
+        icon: 'FolderAdd',
+      },
+    },
   ],
 });
 

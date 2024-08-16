@@ -26,9 +26,9 @@ export default [
       'import-x': pluginImportX,
     },
   },
+  pluginJs.configs.recommended,
   ...tsEslint,
   ...vueEslint,
-  pluginJs.configs.recommended,
   {
     ...eslintPluginPrettierRecommended,
     rules: {

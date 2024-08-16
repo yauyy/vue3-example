@@ -31,8 +31,13 @@
 
 <script setup lang="ts">
 import { useVModel } from '../hooks';
+// import { useVModel } from '../useVModel';
 const props = defineProps({
   infoData: {
+    type: Object,
+    required: true,
+  },
+  person2: {
     type: Object,
     required: true,
   },
@@ -46,9 +51,17 @@ const $emit = defineEmits(['update:message', 'update:info']);
 
 const msg = useVModel(props, 'message', $emit);
 const info = useVModel(props, 'infoData', $emit);
+const person3 = useVModel(props, 'person2', $emit);
+
+console.log(info.value);
+console.log(props.person2);
+
+console.log(info.value === props.person2);
+console.log(person3.value === props.person2);
 
 const submit = () => {
   info.value.address.city = 'shanghai';
+  console.log(info.value === props.infoData);
   console.log(info.value);
   console.log(msg.value);
 };
