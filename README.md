@@ -347,3 +347,7 @@ export default defineConfig({
 ## ESLint配置检查器介绍
 
 > npx eslint --inspect-config
+
+## transiton
+
+[transiton](https://developer.chrome.com/docs/web-platform/view-transitions?hl=zh-cn)
