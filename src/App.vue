@@ -8,7 +8,7 @@
       <el-scrollbar>
         <BaseAside v-model:asideWidth="asideWidth" />
       </el-scrollbar>
-      <el-main class="page-bg">
+      <el-main class="page-bg" :style="`width: calc(100vw - ${asideWidth})`">
         <div class="page-content h-full rounded-10px overflow-hidden p-10px">
           <el-scrollbar>
             <router-view />

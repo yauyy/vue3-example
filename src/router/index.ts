@@ -96,6 +96,15 @@ const router = createRouter({
         icon: 'FolderAdd',
       },
     },
+    {
+      path: '/chromeAi',
+      name: 'chromeAi',
+      component: () => import('../views/chromeAi/index.vue'),
+      meta: {
+        title: 'chromeAi',
+        icon: 'FolderAdd',
+      },
+    },
   ],
 });
 
